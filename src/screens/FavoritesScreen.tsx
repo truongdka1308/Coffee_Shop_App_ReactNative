@@ -14,7 +14,8 @@ import HeaderBar from '../components/HeaderBar';
 import EmptyListAnimation from '../components/EmptyListAnimation';
 import FavoritesItemCard from '../components/FavoritesItemCard';
 
-const FavoritesScreen = ({navigation}: any) => {
+const FavoritesScreen = ({navigation,route}: any) => {
+  const user=route.params.user;
   const FavoritesList = useStore((state: any) => state.FavoritesList);
   const tabBarHeight = useBottomTabBarHeight();
   const addToFavoriteList = useStore((state: any) => state.addToFavoriteList);
@@ -34,7 +35,7 @@ const FavoritesScreen = ({navigation}: any) => {
         <View
           style={[styles.ScrollViewInnerView, {marginBottom: tabBarHeight}]}>
           <View style={styles.ItemContainer}>
-            <HeaderBar title="Favourites" />
+            <HeaderBar title="Favourites" navigation={navigation} user={user}/>
 
             {FavoritesList.length == 0 ? (
               <EmptyListAnimation title={'No Favourites'} />

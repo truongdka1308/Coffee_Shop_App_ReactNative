@@ -14,8 +14,8 @@ import ProfilePic from '../components/ProfilePic';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
-const SettingScreen = ({navigation}) => {
-  
+const SettingScreen = ({navigation,route}) => {
+  const user=route.params.user;
   const [showModal, setShowModal] = useState(false);
 
   const handleLogout = () => {
@@ -28,18 +28,8 @@ const SettingScreen = ({navigation}) => {
 
   return (
     <View style={styles.ScreenContainer}>
-      <View style={styles.HeaderContainer}>
-       <TouchableOpacity onPress={()=>navigation.goBack()}>
-        <GradientBGIcon
-          name="left"
-          color={COLORS.primaryLightGreyHex}
-          size={FONTSIZE.size_16}
-        />
-      </TouchableOpacity>
-      <Text style={styles.HeaderText}>Setting</Text>
-      <ProfilePic />
-      </View>
-      {/*  */}
+      <HeaderBar icon='left' title="Setting" navigation={navigation} user={user}></HeaderBar>
+    
       <TouchableOpacity>
       <View style={styles.containerSetting}>
         <View style={styles.containerTextSetting}>
@@ -167,6 +157,7 @@ const styles = StyleSheet.create({
   textSetting:{
     textAlign:'center',
     flex:1,
+    color:'white'
   },
   modalBackground: {
     flex: 1,

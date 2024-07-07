@@ -2,21 +2,19 @@
   "user": [
     {
       "id": "1",
-      "email": "john@gmail.com",
       "username": "truongnguyen",
-      "password": "truong123",
+      "password": "truongdz",
       "name": "Nguyen Van Truong",
-      "phone": "1-570-236-7033",
-      "__v": 0
+      "email": "john@gmail.com",
+      "phone": "1-570-236-7033"
     },
     {
       "id": "2",
-      "email": "morrison@gmail.com",
       "username": "mor_2314",
-      "password": "83r5^_",
+      "password": "kocopass",
       "name": "Nguyen Van Truong",
-      "phone": "1-570-236-7033",
-      "__v": 0
+      "email": "morrison@gmail.com",
+      "phone": "1-570-236-7033"
     },
     {
       "id": "3",
@@ -105,8 +103,9 @@
     {
       "id": "b4a8",
       "username": "linhn",
-      "email": "linh1234@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "name": "linhkk",
+      "email": "linh1234@gmail.com"
     },
     {
       "id": "afe7",

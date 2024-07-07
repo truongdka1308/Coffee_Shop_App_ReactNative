@@ -21,7 +21,8 @@ import EmptyListAnimation from '../components/EmptyListAnimation';
 import PopUpAnimation from '../components/PopUpAnimation';
 import OrderHistoryCard from '../components/OrderHistoryCard';
 
-const OrderHistoryScreen = ({navigation}: any) => {
+const OrderHistoryScreen = ({navigation,route}: any) => {
+  const user=route.params.user;
   const OrderHistoryList = useStore((state: any) => state.OrderHistoryList);
   const tabBarHeight = useBottomTabBarHeight();
   const [showAnimation, setShowAnimation] = useState(false);
@@ -60,7 +61,7 @@ const OrderHistoryScreen = ({navigation}: any) => {
         <View
           style={[styles.ScrollViewInnerView, {marginBottom: tabBarHeight}]}>
           <View style={styles.ItemContainer}>
-            <HeaderBar title="Order History" />
+            <HeaderBar title="Order History" navigation={navigation} user={user}/>
 
             {OrderHistoryList.length == 0 ? (
               <EmptyListAnimation title={'No Order History'} />

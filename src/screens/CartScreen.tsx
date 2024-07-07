@@ -16,6 +16,7 @@ import PaymentFooter from '../components/PaymentFooter';
 import CartItem from '../components/CartItem';
 
 const CartScreen = ({navigation, route}: any) => {
+  const user=route.params.user;
   const CartList = useStore((state: any) => state.CartList);
   const CartPrice = useStore((state: any) => state.CartPrice);
   const incrementCartItemQuantity = useStore(
@@ -50,7 +51,7 @@ const CartScreen = ({navigation, route}: any) => {
         <View
           style={[styles.ScrollViewInnerView, {marginBottom: tabBarHeight}]}>
           <View style={styles.ItemContainer}>
-            <HeaderBar title="Cart" />
+            <HeaderBar title="Cart" navigation={navigation} user={user}/>
 
             {CartList.length == 0 ? (
               <EmptyListAnimation title={'Cart is Empty'} />

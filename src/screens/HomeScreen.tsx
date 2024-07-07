@@ -47,7 +47,8 @@ const getCoffeeList = (category: string, data: any) => {
   }
 };
 
-const HomeScreen = ({navigation}: any) => {
+const HomeScreen = ({navigation,route}: any) => {
+  const user=route.params.user
   const CoffeeList = useStore((state: any) => state.CoffeeList);
   const BeanList = useStore((state: any) => state.BeanList);
   const addToCart = useStore((state: any) => state.addToCart);
@@ -128,7 +129,7 @@ const HomeScreen = ({navigation}: any) => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.ScrollViewFlex}>
         {/* App Header */}
-        <HeaderBar />
+        <HeaderBar navigation={navigation} user={user}/>
 
         <Text style={styles.ScreenTitle}>
           Find the best{'\n'}coffee for you

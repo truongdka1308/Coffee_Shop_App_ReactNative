@@ -21,8 +21,13 @@ const App = () => {
       <Stack.Navigator screenOptions={{headerShown: false}}>
       <Stack.Screen name="Login" component={LoginScreen} />
       <Stack.Screen name="Register" component={RegisterScreen} />
-      <Stack.Screen name="Setting" component={SettingScreen}/>
-      <Stack.Screen name="Profile" component={ProfileScreen}/>
+      <Stack.Screen name="Setting" 
+      component={SettingScreen}
+      options={{animation: 'slide_from_bottom'}}
+      />
+      <Stack.Screen name="Profile" component={ProfileScreen}
+       options={{animation: 'slide_from_bottom'}}
+      />
         <Stack.Screen
           name="Tab"
           component={TabNavigator}

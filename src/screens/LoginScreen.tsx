@@ -1,7 +1,9 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, Button, Alert, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
-const LoginScreen = ({ navigation, route }) => {
+const LoginScreen = ({navigation}: any) => {
+  
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorUsername, setErrorUsername] = useState('');

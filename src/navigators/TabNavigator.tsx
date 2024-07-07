@@ -11,7 +11,7 @@ import CustomIcon from '../components/CustomIcon';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
+const TabNavigator = ({route}) => {
   return (
     <Tab.Navigator
       screenOptions={{
@@ -30,6 +30,7 @@ const TabNavigator = () => {
       <Tab.Screen
         name="Home"
         component={HomeScreen}
+         initialParams={{ user: route.params.user }} 
         options={{
           tabBarIcon: ({focused, color, size}) => (
             <CustomIcon
@@ -44,6 +45,7 @@ const TabNavigator = () => {
       <Tab.Screen
         name="Cart"
         component={CartScreen}
+        initialParams={{ user: route.params.user }} 
         options={{
           tabBarIcon: ({focused, color, size}) => (
             <CustomIcon
@@ -58,6 +60,7 @@ const TabNavigator = () => {
       <Tab.Screen
         name="Favorite"
         component={FavoritesScreen}
+        initialParams={{ user: route.params.user }} 
         options={{
           tabBarIcon: ({focused, color, size}) => (
             <CustomIcon
@@ -72,6 +75,7 @@ const TabNavigator = () => {
       <Tab.Screen
         name="History"
         component={OrderHistoryScreen}
+        initialParams={{ user: route.params.user }} 
         options={{
           tabBarIcon: ({focused, color, size}) => (
             <CustomIcon
