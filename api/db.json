@@ -103,8 +103,8 @@
     {
       "id": "b4a8",
       "username": "linhn",
-      "password": "123456",
-      "name": "linhkk",
+      "password": "linh123",
+      "name": "linhkkk",
       "email": "linh1234@gmail.com"
     },
     {
@@ -112,6 +112,13 @@
       "username": "truongabc",
       "email": "truong@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "30ae",
+      "username": "user123",
+      "password": "123456",
+      "name": "usert",
+      "email": "user134@gmail.com"
     }
   ]
 }
