@@ -26,6 +26,10 @@ const SettingScreen = ({navigation,route}) => {
     navigation.navigate("Login")
   };
 
+  const handleAboutScreen = () => {
+    navigation.navigate("About")
+  };
+
   return (
     <View style={styles.ScreenContainer}>
       <HeaderBar icon='left' title="Setting" navigation={navigation} user={user}></HeaderBar>
@@ -70,7 +74,7 @@ const SettingScreen = ({navigation,route}) => {
 </View>
 </TouchableOpacity>
 
-<TouchableOpacity>
+<TouchableOpacity onPress={handleAboutScreen}>
 <View style={styles.containerSetting}>
         <View style={styles.containerTextSetting}>
         <Icon name='info-circle' size={24} color={'orange'}></Icon>
